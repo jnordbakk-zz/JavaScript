@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/4.13.0/d3.min.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+    crossorigin="anonymous">
+</head>
+
+ <body>
+
+    <select id="selDataset" onchange="getFilter(this.value)">
+        <option value="date">Date</option>
+        <option value="city">City</option>
+        <option value="state">State</option>
+    </select>
+
+
+    <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <form>
+              <div class="form-group">
+                <label for="s-form">Filter Data by Date</label>
+                <input class="form-control" id="s-form-input" name="s-form" type="text" placeholder="D/M/YYYY">
+              </div>
+              <button id="submit" type="submit" class="btn btn-default">Submit</button>
+            </form>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-12">
+            <h1>Filtered Data</h1>
+            <ul class="summary"></ul>
+          </div>
+        </div>
+      </div>
+
+
+    <div class="container">
+        <div class="row">
+          <div class="col-md-12">  
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>Datetime</th>
+        <th>City</th>
+        <th>State</th>
+        <th>Country</th>
+        <th>Shape</th>
+        <th>DurationMinutes</th>
+        <th>Comments</th>
+      </tr>
+    </thead>
+    <tbody></tbody>
+  </table>
+  </div>
+  </div>
+  </div>
+</body>
+<script src="Data/data.js"></script>
+<!-- <script src="js/index.js"></script> -->
+<script src="app.js"></script>
+
+</html>
